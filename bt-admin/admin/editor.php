@@ -280,10 +280,10 @@
 </head>
 
 <body>
-	<?php include prepend_root('/menu_privado.php') ?>
+	<?php include prepend_root('/asignacionfs/menu_privado.php') ?>
 
 	<div class="container">
-		<?php include prepend_root('/admin/fragments/logos.php') ?>
+		<?php include './fragments/logos.php' ?>
 
 		<a href="index.php" class="btn btn-default" style="margin-bottom: 20px;">Regresar</a>
 
