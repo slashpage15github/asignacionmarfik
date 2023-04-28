@@ -1,0 +1,162 @@
+html,
+body {
+}
+
+#app * {
+    font-family: "Trebuchet MS", Helvetica, Geneva, Arial, sans-serif;
+}
+
+h1, h2, h4 {
+    text-align: center;
+    color: #555;
+
+}
+
+h1 {
+    margin-top: 30px;
+    padding: 0 0 25px 0;
+    font-size: xx-large;
+}
+
+h2 {
+    margin: 25px 0 25px 0;
+    font-size: x-large;
+}
+
+h4 {
+    font-size: large;
+}
+
+.flipping {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    border: 1px solid #ddd;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.config, .usage, .options, .download {
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .config_column_1 {
+        padding-left: 50px;
+    }
+}
+
+section a:link, a:hover, a:visited {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #1679d6;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.usage {
+    font-size: large;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+.options ul {
+    list-style: none;
+}
+
+.options ul li {
+
+}
+
+.options ul li b {
+    color: #555;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.config {
+    f4ont-size: 14px;
+}
+
+.config input[type=text],
+.config input[type=date],
+.config input[type=datetime],
+.config input[type=number],
+.config input[type=search],
+.config input[type=time],
+.config input[type=url],
+.config input[type=email],
+textarea,
+select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #BEBEBE;
+    padding: 2px;
+    margin: 0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    font-size: 14px;
+}
+
+.config input[type=text]:focus,
+.config input[type=date]:focus,
+.config input[type=datetime]:focus,
+.config input[type=number]:focus,
+.config input[type=search]:focus,
+.config input[type=time]:focus,
+.config input[type=url]:focus,
+.config input[type=email]:focus,
+.config textarea:focus,
+.config select:focus {
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+.config input[type='text'], .config input[type='number'] {
+    width: 55px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.config input[type='number'] {
+    -moz-appearance: textfield;
+    width: 45px;
+}
+
+.config input::-webkit-outer-spin-button,
+.config input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.config label {
+    margin-top: 10px
+}
+
+.config input, .config select {
+    margin-top: 10px
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+pre.prettyprint {
+    border: none !important
+}
+
+/*-------------------------------------------------------------------------------------------*/
+.download div {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+/*-------------------------------------------------------------------------------------------*/
+footer {
+    margin-bottom: 30px
+}

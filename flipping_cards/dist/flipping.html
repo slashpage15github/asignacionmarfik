@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipping Cards Carousel</title>
+
+    <link rel="stylesheet" href="css/flipping.css"/>
+    <script type="text/javascript" src="js/flipping.js"></script>
+
+</head>
+
+<body>
+
+
+<div id="flipping_cards" class="flipping">
+
+    <div class="btn-backward"></div>
+
+    <div class="cards">
+
+        <div>
+            <h2>Lorem ipsum<br>1</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>2</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>3</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>4</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>5</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>6</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>7</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>8</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>9</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>10</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>11</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>12</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>13</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>14</h2>
+        </div>
+        <div>
+            <h2>Lorem ipsum<br>15</h2>
+        </div>
+
+    </div>
+
+    <div class="btn-forward"></div>
+
+</div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var options = {
+            autoFlipMode: false,
+            autoFlipDelay: 1500,
+            pauseMouseOver: true,
+
+            cardsShadow: true,
+            buttonsShadow: true,
+
+            transitionDuration: 700,
+
+            rotationMode: "simultaneous",
+            sequentialDelay: 600,
+
+            cardWidth: 150,
+            cardHeight: 180,
+
+            spacingHorizontal: 15,
+            spacingVertical: 15,
+
+            cardsToShow: 3,
+            cardsPerRow: 3,
+
+            startFromIndex: 1
+        };
+
+        flipping.init('flipping_cards', options);
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

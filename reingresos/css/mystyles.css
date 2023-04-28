@@ -1,0 +1,59 @@
+/*estlo para la function customize alert
+Alert.render('mensaje');*/
+#dialogoverlay{
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 10;
+}
+#dialogbox{
+    display: none;
+    position: fixed;
+    background: #000;
+    border-radius:7px; 
+    width:550px;
+    z-index: 10;
+}
+#dialogbox > div{ background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #ff9999; font-size:19px; padding:10px; color:black; }
+#dialogbox > div > #dialogboxbody{ background:#000000; padding:20px; color:#FFF; font-size:20px;}
+#dialogbox > div > #dialogboxfoot{ background: #ff9999; padding:10px; text-align:right; }
+
+#btn_alertjs:hover{
+  -moz-box-shadow: 0 0 20px red; 
+  -webkit-box-shadow: 0 0 20px red; 
+  box-shadow: 0 0 20px red;
+
+}
+
+    /*estilos de barra de navegacion en paginacion*/
+    
+    a.paginacion:link{
+padding: 3px 8px;
+  margin:0 4px;
+  text-decoration: none;
+  border:1px solid #919106;
+  -webkit-border-radius:3px;-moz-border-radius:3px;
+  background: #ddd url(pics/wp1.jpg) 0 -50px repeat-x;
+}
+a.paginacion:hover{
+ border:1px solid #888;
+  background: #ccc url(pics/wp1.jpg) 0 -25px repeat-x;
+}
+a.paginacion:visited{
+padding: 3px 8px;
+  margin:0 4px;
+  text-decoration: none;
+  border:1px solid #999;
+  -webkit-border-radius:3px;-moz-border-radius:3px;
+  background: #ddd url(pics/wp1.jpg) 0 -50px repeat-x;
+}
+/* estilos de barra de navegacion en paginacion*/
+
+#ilumina_renglon table tr:hover {
+  background-color: #ffe6e6;
+}

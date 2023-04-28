@@ -1,0 +1,115 @@
+$btncolor: #e7e7e7;
+
+.flipping {
+
+  visibility: hidden;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+
+    &.btn-backward, &.btn-forward {
+      font-size: 3rem;
+      font-family: Geneva, Arial, Helvetica, sans-serif;
+      color: $btncolor;
+      transform: scaleX(1.1);
+      will-change: transform;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+        //will-change: transform;
+        //transition: all 0.3s ease;
+        // text-shadow: 0 7px 8px rgba(0, 0, 0, 0.26);
+        //color: darken($btncolor, 2%);
+        text-shadow: 0 7px 7px #bdbdbd;
+      }
+
+      &:active {
+        text-shadow: 0 3px 3px #bdbdbd;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+  }
+
+  .shadow-on {
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.7), 0 5px 6px rgba(0, 0, 0, 0.2);
+  }
+  .shadowoff {
+    text-shadow: none;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  .card-box {
+
+    .card-stack {
+
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      float: left;
+      display: inline-block;
+
+      > div {
+      }
+
+      * {
+        overflow: hidden;
+        //pointer-events: none;
+      }
+
+    }
+
+    .back {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    .back1 {
+      transform: rotateY(180deg);
+    }
+
+    .back-1 {
+      transform: rotateY(-180deg);
+    }
+
+    .front, .back {
+      overflow: hidden;
+      transition: transform;
+      transition-duration: .7s;
+      transition-timing-function: cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition-delay: 0s;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      will-change: contents, transform;
+    }
+    .shadow-on {
+      box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .2);
+    }
+    .shadow-off {
+      box-shadow: none;
+    }
+
+  }
+
+}
+
+/* IE9, IE10 */
+@media screen and (min-width: 0 \0
+) {
+  .back {
+    display: none
+  }
+}

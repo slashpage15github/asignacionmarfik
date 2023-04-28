@@ -1,0 +1,181 @@
+/* *= selector universla aplica para todas las etiquetas
+La propiedad box-sizing se usa para modificar las propiedades por defecto del CSS box model que calculan el alto y el ancho de los elementos*/ 
+/*
+Estas son las propiedades con prefijo de proveedor que ofrecen los motores de representación relevantes (-webkit para Chrome, Safari; -moz para Firefox, -o para Opera, -ms para Internet Explorer). Por lo general, se utilizan para implementar funciones CSS nuevas o patentadas, antes de la aclaración / definición final por parte del W3.*/
+* { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: verdana;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: darkred;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+body{
+background-color: lightgrey;
+}
+
+h1{
+    text-align: center;
+    color:black;
+}
+h2{
+    text-align: center;
+    color:black;
+}
+h3{
+    text-align: center;
+    color:black;
+}
+
+input[type=text],input[type=tel],input[type=email],select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;/*La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.*/
+    text-transform: uppercase;
+}
+
+
+label {
+    padding: 12px 12px 12px 0;/*padding-top, padding-right, padding-bottom, and padding-left*/
+    display: inline-block;/*crear una cuadrícula de cajas que llene el navegador armoniosamente*/
+    font-size: 20px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+    background-color: #993333;
+    text-transform: uppercase;
+
+}
+
+.container {
+    border-radius: 5px;
+    background-color: darkred;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-100 {
+    float: left;
+    width: 99%;
+    margin-top: 16px;
+}
+
+ .boton_menu{
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 200;
+    font-size: 12px;
+    color: #ffffff;
+    background-color:white;
+    border-radius: 6px;
+    border: 2px solid white;
+  }
+  .boton_menu:hover{
+    color: black;
+    background-color: #ffffff;
+  }
+
+
+.boton{
+	padding-top: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";/*Se usa generalmente para añadir contenido estético a un elemento, usando la propiedad CSS content*/
+    display: table;
+    clear: both;
+    /*La propiedad CSS clear especifica si un elemento puede estar al lado de elementos flotantes que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad clear aplica a ambos elementos flotantes y no flotantes.*/
+}
+td{
+    border: solid 1px black;
+    padding: .5%;
+    background-color: white;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+}
+thead, th{
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+    padding: .7%;
+    font-size: 17px;
+}
+table{
+    background-color: white;
+    /*border-collapse: collapse;
+    width: 100%;
+}
+body {
+    margin: 0;
+    font-family: sansation;
+    color: black;
+    text-align: center;
+}
+
+/*Diseño receptivo: cuando la pantalla tiene al 
+menos de 600 píxeles de ancho, 
+haga que las dos columnas se apilen una 
+encima de la otra en lugar de una al lado de la otra */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@font-face {
+   font-family: sansation;
+   src: url(sansation_light.woff);
+}
+
