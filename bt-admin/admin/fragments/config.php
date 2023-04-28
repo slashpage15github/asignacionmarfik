@@ -5,8 +5,8 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'tmpmarser');
 
 // Los directorios a continuación deben existir y son relativos al directorio público del servidor web; no del sistema de archivos. Se debe incluir la diagonal final.
-define('UPLOADS_DIR', '/uploads/');
-define('THUMBNAILS_DIR', '/uploads-thumbnails/');
+define('UPLOADS_DIR', '/asignacionfs/bt-uploads/');
+define('THUMBNAILS_DIR', '/asignacionfs/bt-uploads-thumbnails/');
 
 define('MAX_IMAGE_SIZE', intval(4 * 1024 * 1024)); // En bytes.
 define('MAX_LENGTH_TITLE', 100);

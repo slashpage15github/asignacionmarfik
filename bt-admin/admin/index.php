@@ -63,10 +63,10 @@
 </head>
 
 <body>
-	<?php include prepend_root('/menu_privado.php') ?>
+	<?php include prepend_root('/asignacionfs/menu_privado.php') ?>
 
 	<div class="container">
-		<?php include prepend_root('/admin/fragments/logos.php') ?>
+		<?php include './fragments/logos.php' ?>
 
 		<?php if ($success_msg) { ?>
 		<div class="alert alert-success text-center" role="alert"><?= $success_msg ?></div>
