@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(session_id() === '') {
+	session_start();
+}
 
 function _get_session_csrf_token() {
 	if (!isset($_SESSION['SESSION_CSRF_TOKEN'])) {

@@ -3,6 +3,8 @@
 	require_once './fragments/config.php';
 	require_once './fragments/common.php';
 
+	$error_msg = '';
+
 	$success_msg = $_SESSION['successful'];
 	$_SESSION['successful'] = null;
 

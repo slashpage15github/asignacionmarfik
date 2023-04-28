@@ -5,6 +5,11 @@
 	require_once './fragments/common.php';
 	require_once './fragments/thumbnail.php';
 
+	$error_msg = '';
+	$error_msg_title = '';
+	$error_msg_description = '';
+	$error_msg_poster = '';
+
 	function persist_poster($job, $creation_mode) {
 		if (!$creation_mode) {
 			delete_poster($job);
