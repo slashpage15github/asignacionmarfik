@@ -132,7 +132,11 @@
 	function validate_input_fields($job, $creation_mode) {
 		global $valid_mime_types;
 		global $valid_extensions;
-		$errors = array();
+		$errors = array(
+			'title' => '',
+			'description' => '',
+			'poster' => '',
+		);
 
 		if (!$job->title) {
 			$errors['title'] = 'Campo requerido.';
