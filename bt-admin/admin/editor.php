@@ -132,11 +132,7 @@
 	function validate_input_fields($job, $creation_mode) {
 		global $valid_mime_types;
 		global $valid_extensions;
-		$errors = array(
-			'title' => '',
-			'description' => '',
-			'poster' => '',
-		);
+		$errors = array();
 
 		if (!$job->title) {
 			$errors['title'] = 'Campo requerido.';
@@ -239,9 +235,9 @@
 			$input_fields_errors = validate_input_fields($job, $creation_mode);
 			if ($input_fields_errors) {
 				$error_msg = 'Revise los campos que no pasaron las validaciones.';
-				$error_msg_title = $input_fields_errors['title'];
-				$error_msg_description = $input_fields_errors['description'];
-				$error_msg_poster = $input_fields_errors['poster'];
+				$error_msg_title = array_key_exists('title', $input_fields_errors) ? $input_fields_errors['title'] : '';
+				$error_msg_description = array_key_exists('description', $input_fields_errors) ? $input_fields_errors['description'] : '';
+				$error_msg_poster = array_key_exists('poster', $input_fields_errors) ? $input_fields_errors['poster'] : '';
 			} else {
 				perisist($job, $creation_mode);
 				$_SESSION['successful'] = $creation_mode ? 'Registro creado exitosamente.' : 'Registro modificado exitosamente.';
