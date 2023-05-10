@@ -5,8 +5,12 @@
 
 	$error_msg = '';
 
-	$success_msg = $_SESSION['successful'];
-	$_SESSION['successful'] = null;
+	if (array_key_exists('successful', $_SESSION)) {
+		$success_msg = $_SESSION['successful'];
+		$_SESSION['successful'] = null;
+	} else {
+		$success_msg = '';
+	}
 
 	function read() {
 		try {
