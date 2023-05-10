@@ -292,7 +292,7 @@
 
 		<a href="index.php" class="btn btn-default" style="margin-bottom: 20px;">Regresar</a>
 
-		<form method="POST" enctype="multipart/form-data" class="form-horizontal">
+		<form method="POST" enctype="multipart/form-data" class="form-horizontal" id="main-form">
 			<?php if ($error_msg) { ?>
 			<div class="alert alert-danger text-center" role="alert"><?= $error_msg ?></div>
 			<?php } ?>
@@ -384,13 +384,32 @@
 				<div class="col-md-offset-2 col-md-10" style="display: flex; justify-content: space-between;">
 					<button type="submit" class="btn btn-primary">Guardar</button>
 					<?php if (!$creation_mode) { ?>
-					<button type="submit" class="btn btn-danger" name="deletion">Eliminar</button>
+					<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletion-modal">Eliminar</button>
 					<?php } ?>
 				</div>
 			</div>
 
 			<?php insert_session_csrf_token() ?>
 		</form>
+	</div>
+
+	<!-- Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality. -->
+	<div class="modal fade" id="deletion-modal" tabindex="-1" role="dialog" aria-labelledby="deletion-modal-title">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="deletion-modal-title">Confirmación de eliminación</h4>
+				</div>
+
+				<div class="modal-body">¿Está seguro de que desea eliminar esta oferta de trabajo?</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button type="submit" class="btn btn-danger" form="main-form" name="deletion">Eliminar</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 
